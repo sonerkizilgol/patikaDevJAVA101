@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class KDVTutar {
+    public static void main(String[] args) {
+        double fiyat, kdv, kdvsi;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ürünün ücretini giriniz: ");
+        fiyat = sc.nextDouble();
+        kdv = ((fiyat > 1000) ? 0.08 : 0.18);
+        System.out.println("KDV oranı:" + kdv); // Debug
+        kdvsi = fiyat * kdv;
+        System.out.println("KDV'siz fiyat: " + fiyat);
+        System.out.println("KDV'li fiyat: " + (fiyat + kdvsi));
+        System.out.println("KDV tutarı: " + (Math.round(kdvsi * 100)/100d)); // Burada bu yuvarlama işlemini yapmazsam 1.8 yerine 1.777... gibi yanıtlar verebiliyor
+    }
+}
