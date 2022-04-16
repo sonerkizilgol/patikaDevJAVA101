@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class DaireDilimAlani {
+    public static void main(String[] args) {
+        double r, pi = 3.14, centAngle;
+        Scanner inp = new Scanner(System.in);
+
+        System.out.print("Dairenin yarı çapını giriniz: ");
+        r = inp.nextDouble();
+
+        System.out.print("Dairenin merkez açısının ölçüsünü giriniz: ");
+        centAngle = inp.nextDouble();
+
+        System.out.println("Girdiğiniz daire diliminin alanı:" + ((pi * (r*r) * centAngle)/360));
+    }
+}
