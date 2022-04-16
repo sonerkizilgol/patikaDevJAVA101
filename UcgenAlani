@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class UcgenAlani {
+    public static void main(String[] args) {
+        double aKenar, bKenar, cKenar, uVar, alanKare;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("A kenarının uzunluğunu giriniz: ");
+        aKenar = sc.nextDouble();
+        System.out.print("B kenarının uzunluğunu giriniz: ");
+        bKenar = sc.nextDouble();
+        System.out.print("C kenarının uzunluğunu giriniz: ");
+        cKenar = sc.nextDouble();
+        uVar = (aKenar + bKenar + cKenar) / 2;
+        alanKare = uVar * (uVar - aKenar) * (uVar - bKenar) * (uVar - cKenar);
+        System.out.println("Üçgenin alanı: " + Math.sqrt(alanKare));
+    }
+}
