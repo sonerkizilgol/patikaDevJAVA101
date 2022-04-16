@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class ManavKasa {
+    public static void main(String[] args) {
+        double toplam; // Meyveleri ayrı ayrı depolamaya gerek yok =)
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Armut (KG): ");
+        toplam = ( 2.14 * (sc.nextDouble()) );
+
+        System.out.print("Elma (KG): ");
+        toplam += ( 3.67 * (sc.nextDouble()) );
+
+        System.out.print("Domates (KG): ");
+        toplam += ( 1.11 * (sc.nextDouble()) );
+
+        System.out.print("Muz (KG): ");
+        toplam += ( 0.95 * (sc.nextDouble()) ); //hocam muzu bu fiyata nerde bulurum lütfen söyleyin
+
+        System.out.print("Patlıcan (KG): ");
+        toplam += ( 5.00 * (sc.nextDouble()) ); //muzdan verdiklerini burdan alıyolar
+
+        System.out.println("Toplam Tutar: " + toplam);
+    }
+}
