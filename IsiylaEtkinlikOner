@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class IsiylaEtkinlikOner {
+    public static void main(String[] args) {
+        int heat;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Sıcaklığı celcius derece olarak Giriniz: ");
+        heat = sc.nextInt();
+        System.out.print((heat < 5) ? "Kayak yapabilirsiniz. " : "");
+        System.out.print((heat > 4 && heat < 16) ? "Sinemaya gidebilirsiniz. " : "");
+        System.out.print((heat > 15 && heat < 26) ? "Pikniğe gidebilirsiniz. " : "");
+        System.out.print((heat > 25) ? "Yüzebilirsiniz. " : "");
+        System.out.print((heat > 999) ? "(Yine de bu sıcakta yüzmekten farklı şeylere öncelik vermenizi öneririz.)" : ""); // :)
+    }
+}
