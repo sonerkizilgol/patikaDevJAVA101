@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class OrtalamaWithIf {
+        public static void main(String[] args) {
+            int matematik, fizik, kimya, turkce, tarih, muzik, reduce = 0;
+            Scanner inp = new Scanner(System.in);
+            System.out.print("Matematik Notunuz: ");
+            matematik = inp.nextInt();
+            if ( (matematik < 0) || (matematik > 100) ) { matematik = 0; reduce++; } // 0-100 arası olmayan her dersin notunu 0 olarak kaydediyor ve reduce değişkeninin değerini 1 arttırıyor.
+            System.out.print("Fizik Notunuz: ");
+            fizik = inp.nextInt();
+            if ( (fizik < 0) || (fizik > 100) ) { fizik = 0; reduce++; }
+            System.out.print("Kimya Notunuz: ");
+            kimya = inp.nextInt();
+            if ( (kimya < 0) || (kimya > 100) ) { kimya = 0; reduce++; }
+            System.out.print("Türkçe Notunuz: ");
+            turkce = inp.nextInt();
+            if ( (turkce < 0) || (turkce > 100) ) { turkce = 0; reduce++; }
+            System.out.print("Tarih Notunuz: ");
+            tarih = inp.nextInt();
+            if ( (tarih < 0) || (tarih > 100) ) { tarih = 0; reduce++; }
+            System.out.print("Müzik Notunuz: ");
+            muzik = inp.nextInt();
+            if ( (muzik < 0) || (muzik > 100) ) { muzik = 0; reduce++; }
+            double ortalama = (matematik + fizik + kimya + turkce + tarih + muzik) / (6 - reduce); // Not ortalamasını (6 - reduce)'a bölüyor. reduce = değeri geçersiz olduğu için sistem tarafından sıfıra eşitlenmiş derslerin sayısı.
+            if (ortalama >= 55) {
+                System.out.print("Sınıfı geçtiniz! ");
+            } else {
+                System.out.print("Sınıfta kaldınız. ");
+            }
+             System.out.print("Not ortalamanız: " + ortalama);
+
+        }
+    }
