@@ -1,0 +1,28 @@
+import java.util.Scanner;
+//Palindromik sayı, iki taraftan okunduğu zaman okunuş yönüyle aynı olan sayılardır.
+
+public class PalindromCheck {
+    static boolean isPalindrom(int inp){
+        int lastNumber, reverseNumber = 0, tmp = inp;
+        while (tmp != 0) {
+            lastNumber = tmp % 10;
+            reverseNumber = (reverseNumber * 10) + lastNumber;
+            tmp /= 10;
+        }
+        if (reverseNumber == inp) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    public static void main(String[] args) {
+        int inp;
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Sayı giriniz: ");
+        inp = sc.nextInt();
+        System.out.print(isPalindrom(inp) ? inp + " sayısı Palindrom bir sayıdır." : inp + " sayısı Palindrom bir sayı değildir." );
+
+    }
+}
